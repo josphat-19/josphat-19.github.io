@@ -2,46 +2,179 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Capstone Project | Josphat Gitahi</title>
+<title>Capstone Portfolio | Josphat Gitahi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+crossorigin="anonymous" referrerpolicy="no-referrer">
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f6fa;
+/* ---------- RESET & GLOBAL ---------- */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
-header {
-    background: #273c75;
-    color: white;
-    padding: 30px;
-    text-align: center;
+
+html {
+    scroll-behavior: smooth;
 }
-nav {
-    background: #40739e;
-    padding: 12px;
-    text-align: center;
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #2f3640;
+    line-height: 1.7;
 }
-nav a {
-    color: white;
-    margin: 12px;
+
+a {
     text-decoration: none;
-    font-weight: bold;
 }
-section {
-    background: white;
-    margin: 20px;
-    padding: 25px;
-    border-radius: 8px;
-}
-h2 {
-    color: #273c75;
-}
-footer {
-    background: #273c75;
+
+/* ---------- HEADER / HERO ---------- */
+header {
+    background: linear-gradient(135deg, #273c75, #192a56);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.hero-actions {
+    margin-top: 30px;
+}
+
+/* ---------- NAVIGATION ---------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 14px 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav a {
+    color: #273c75;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: #273c75;
+    color: #ffffff;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    margin-bottom: 16px;
+    color: #192a56;
+    border-bottom: 2px solid #dcdde1;
+    padding-bottom: 8px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    margin: 8px 6px 8px 0;
+    padding: 12px 18px;
+    background: #273c75;
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background: #40739e;
+    transform: translateY(-2px);
+}
+
+/* Download All Button */
+.download-all {
+    background: #44bd32;
+}
+
+.download-all:hover {
+    background: #4cd137;
+}
+
+/* ---------- LISTS ---------- */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* ---------- PHOTOS ---------- */
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.photos img {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #192a56;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ---------- MOBILE OPTIMIZATION ---------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.1rem;
+    }
+
+    section {
+        margin: 25px 15px;
+        padding: 22px;
+    }
+
+    .photos img {
+        width: 100%;
+    }
 }
 </style>
 </head>
@@ -49,77 +182,109 @@ footer {
 <body>
 
 <header>
-<h1>Capstone Project</h1>
-<p>Josphat Gitahi | BSc Information Technology</p>
+    <h1>Capstone Project Portfolio</h1>
+    <p>Josphat Gitahi | BSc Information Technology | Dedan Kimathi University</p>
+
+    <div class="hero-actions">
+        <a class="btn download-all"
+           href="files/capstone-all-files.zip"
+           download>
+           <i class="fa-solid fa-folder-open"></i>
+           Download Full Capstone Portfolio (ZIP)
+        </a>
+    </div>
 </header>
 
 <nav>
-<a href="#resume">Resume</a>
-<a href="#autobiography">Autobiography</a>
-<a href="#innovation">Innovation</a>
-<a href="#culture">African Culture</a>
-<a href="#challenge">Modern Challenge</a>
-<a href="#photos">Photographic Essay</a>
-<a href="#online">Online Presence</a>
+    <a href="#resume">Resume</a>
+    <a href="#autobiography">Autobiography</a>
+    <a href="#innovation">Innovation</a>
+    <a href="#culture">African Culture</a>
+    <a href="#challenge">Modern Challenge</a>
+    <a href="#photos">Photos</a>
+    <a href="#online">Online</a>
 </nav>
 
 <section id="resume">
-<h2>1. Resume</h2>
-<ul>
-<li><a href="files/resume-english.pdf" target="_blank" rel="noopener noreferrer">English Resume</a></li>
-<li><a href="files/resume-kiswahili.pdf" target="_blank" rel="noopener noreferrer">Kiswahili Resume</a></li>
-<li><a href="files/resume-indigenous.pdf" target="_blank" rel="noopener noreferrer">Indigenous Language Resume</a></li>
-</ul>
+    <h2>1. Resume</h2>
+    <a class="btn" href="files/resume-english.pdf" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> Resume (English)
+    </a>
+    <a class="btn" href="files/resume-kiswahili.pdf" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> Resume (Kiswahili)
+    </a>
+    <a class="btn" href="files/resume-indigenous.pdf" target="_blank">
+        <i class="fa-solid fa-file-pdf"></i> Indigenous Language Resume
+    </a>
 </section>
 
 <section id="autobiography">
-<h2>2. Autobiographical Essay</h2>
-<a href="files/AN AUTOBIOGRAPHICAL ESSAY.pdf" target="_blank" rel="noopener noreferrer">📄 Read Essay (PDF)</a><br><br>
-<a href="files/An-Autobiographical-Essay-My-Journey-of-Growth-and-Learning.pdf" target="_blank" rel="noopener noreferrer">📊 Presentation Slides</a>
+    <h2>2. Autobiographical Essay</h2>
+    <a class="btn" href="files/AN AUTOBIOGRAPHICAL ESSAY.pdf" target="_blank">
+        <i class="fa-solid fa-book"></i> Read Essay (PDF)
+    </a>
+    <a class="btn" href="files/An-Autobiographical-Essay-My-Journey-of-Growth-and-Learning.pdf" target="_blank">
+        <i class="fa-solid fa-presentation-screen"></i> Presentation Slides
+    </a>
 </section>
 
 <section id="innovation">
-<h2>3. Innovation / Invention</h2>
-<p>Innovation in Information Technology addressing real-world problems.</p>
-<a href="https://youtube.com" target="_blank" rel="noopener noreferrer">🎥 Watch Innovation Video</a><br><br>
-<a href="files/innovation-presentation.pdf" target="_blank" rel="noopener noreferrer">📊 Presentation</a>
+    <h2>3. Innovation / Invention</h2>
+    <p>Innovative IT solutions addressing real-world and societal challenges.</p>
+    <a class="btn" href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i> Watch Innovation Video
+    </a>
+    <a class="btn" href="files/innovation-presentation.pdf" target="_blank">
+        <i class="fa-solid fa-chart-column"></i> View Presentation
+    </a>
 </section>
 
 <section id="culture">
-<h2>4. African Culture</h2>
-<p>Exploring African cultural heritage and its relevance to technology.</p>
-<a href="https://youtube.com" target="_blank" rel="noopener noreferrer">🎥 Watch Culture Video</a><br><br>
-<a href="files/culture-presentation.pdf" target="_blank" rel="noopener noreferrer">📊 Presentation</a>
+    <h2>4. African Culture</h2>
+    <p>Exploring African cultural heritage and its relevance in modern technology.</p>
+    <a class="btn" href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i> Watch Culture Video
+    </a>
+    <a class="btn" href="files/culture-presentation.pdf" target="_blank">
+        <i class="fa-solid fa-chart-column"></i> View Presentation
+    </a>
 </section>
 
 <section id="challenge">
-<h2>5. Modern Societal Challenge</h2>
-<p>Discussion of a modern challenge affecting African societies and proposed solutions.</p>
-<a href="https://youtube.com" target="_blank" rel="noopener noreferrer">🎥 Watch Video</a>
+    <h2>5. Modern Societal Challenge</h2>
+    <p>Discussion of contemporary challenges affecting African societies and technology-based solutions.</p>
+    <a class="btn" href="https://youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i> Watch Video
+    </a>
 </section>
 
 <section id="photos">
-<h2>6. Photographic Essay</h2>
-<img src="photos/photo1.jpg" width="220">
-<img src="photos/photo2.jpg" width="220">
+    <h2>6. Photographic Essay</h2>
+    <div class="photos">
+        <img src="photos/photo1.jpg" alt="Photographic Essay Image 1">
+        <img src="photos/photo2.jpg" alt="Photographic Essay Image 2">
+    </div>
 </section>
 
 <section id="online">
-<h2>7. Professional Online Presence</h2>
-<ul>
-<li><a href="#">LinkedIn</a></li>
-<li><a href="#">GitHub</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#">YouTube</a></li>
-<li><a href="#">Portfolio</a></li>
-</ul>
+    <h2>7. Professional Online Presence</h2>
+    <a class="btn" href="#" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+    <a class="btn" href="#" target="_blank">
+        <i class="fa-brands fa-github"></i> GitHub
+    </a>
+    <a class="btn" href="#" target="_blank">
+        <i class="fa-solid fa-blog"></i> Blog
+    </a>
+    <a class="btn" href="#" target="_blank">
+        <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
 </section>
 
 <footer>
-<p>© 2026 Josphat Gitahi</p>
+    <p>© 2026 Josphat Gitahi | Capstone Portfolio</p>
 </footer>
 
 </body>
 </html>
-
-
